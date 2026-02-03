@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Birthday Aditri!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --purple: #b862d8;
+        --purple-bright: #c97be6;
+        --purple-soft: #d493ee;
+        --dark: #3f3f3f;
+        --darker: #1c1f23;
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", "Trebuchet MS", sans-serif;
+        font-weight: 600;
+        background: var(--dark);
+        color: var(--white);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      span,
+      nav {
+        font-weight: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .topbar {
+        background: var(--purple);
+        padding: 10px 24px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      }
+
+      .topbar nav {
+        position: absolute;
+        left: 32px;
+      }
+
+      .topbar nav a {
+        font-size: 18px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 4px;
+      }
+
+      .topbar h1 {
+        margin: 0;
+        font-size: 32px;
+        color: #1b0b25;
+      }
+
+      .section {
+        padding: 48px 24px 64px;
+        text-align: center;
+      }
+
+      .section.dark {
+        background: var(--dark);
+      }
+
+      .section.deep {
+        background: #11161c;
+      }
+
+      .section h2 {
+        font-size: 42px;
+        margin: 0 0 24px;
+        letter-spacing: 0.2px;
+      }
+
+      .section p {
+        margin: 16px auto 0;
+        max-width: 720px;
+        font-size: 22px;
+      }
+
+      .note-purple {
+        color: var(--purple-bright);
+      }
+
+      .gallery {
+        display: grid;
+        gap: 16px;
+        max-width: 980px;
+        margin: 24px auto 0;
+      }
+
+      .gallery.four {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gallery.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .gallery.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery.five {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .gallery.bowling {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 820px;
+        gap: 20px;
+      }
+
+      .gallery.bowling img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .gallery img {
+        border-radius: 6px;
+        height: 220px;
+        object-fit: cover;
+        background: #2b2b2b;
+      }
+
+      .gallery.trampoline {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .hero {
+        position: relative;
+        padding: 90px 24px 110px;
+        text-align: left;
+        background: url("images/lavender.jpg") center / cover no-repeat;
+      }
+
+      .intro {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 90px 24px 110px;
+        text-align: left;
+        background: url("images/pansy.jpg") center / cover no-repeat;
+      }
+
+      .intro::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+      }
+
+      .intro .content {
+        position: relative;
+        max-width: 900px;
+        margin-left: 6%;
+      }
+
+      .intro h2 {
+        font-size: 54px;
+        color: var(--purple-soft);
+        margin-bottom: 18px;
+      }
+
+      .intro p {
+        margin: 0;
+        color: #f2f2f2;
+        font-size: 18px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+      }
+
+      .hero .content {
+        position: relative;
+        max-width: 900px;
+        margin-left: 6%;
+      }
+
+      .hero h2 {
+        font-size: 54px;
+        color: var(--purple-soft);
+        margin-bottom: 18px;
+      }
+
+      .hero p {
+        margin: 0;
+        color: #efe6f5;
+        font-size: 18px;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 32px;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .split h2 {
+        font-size: 46px;
+        margin-bottom: 18px;
+        color: var(--purple-bright);
+      }
+
+      .split p {
+        font-size: 20px;
+        line-height: 1.5;
+        color: var(--purple-soft);
+      }
+
+      .split img {
+        border-radius: 18px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      }
+
+      .photo-letter {
+        background: url("images/christmas.jpg") center / cover no-repeat;
+        position: relative;
+        padding: 80px 24px 120px;
+      }
+
+      .memory {
+        background: var(--dark);
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px 24px 64px;
+      }
+
+      .full-gallery {
+        background: var(--dark);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 48px 24px 64px;
+        text-align: center;
+      }
+
+      .full-gallery.bowling-section {
+        background: #000000;
+      }
+
+      .full-gallery h2 {
+        font-size: 38px;
+        margin: 0 0 24px;
+      }
+
+      .full-gallery .gallery {
+        margin-top: 0;
+      }
+
+      .full-gallery .caption {
+        margin: 16px auto 0;
+        font-size: 20px;
+        max-width: 720px;
+      }
+
+      .memory h2 {
+        font-size: 38px;
+        margin: 0 0 18px;
+      }
+
+      .memory img {
+        width: min(420px, 90%);
+        margin: 0 auto;
+      }
+
+      .memory .caption {
+        color: var(--purple-bright);
+        font-size: 20px;
+        margin: 18px auto 0;
+        max-width: 900px;
+      }
+
+      .full-screen-split {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 24px;
+        background: url("images/balloons.jpg") center / cover no-repeat;
+      }
+
+      .full-screen-split::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+      }
+
+      .full-screen-split .content-wrap {
+        position: relative;
+        width: min(1100px, 100%);
+        margin: 0 auto;
+      }
+
+      .full-screen-split h2 {
+        font-size: 46px;
+        margin-bottom: 18px;
+        color: var(--purple-bright);
+      }
+
+      .full-screen-split p {
+        font-size: 20px;
+        line-height: 1.5;
+        color: var(--purple-soft);
+      }
+
+      .photo-letter::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+      }
+
+      .photo-letter .content {
+        position: relative;
+        max-width: 920px;
+        margin: 0 auto;
+        color: var(--purple-bright);
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      @media (max-width: 900px) {
+        .gallery.five,
+        .gallery.four {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery.three {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery.two {
+          grid-template-columns: 1fr;
+        }
+
+        .split {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar nav {
+          position: static;
+          margin-right: auto;
+        }
+
+        .topbar {
+          justify-content: space-between;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .section h2 {
+          font-size: 32px;
+        }
+
+        .intro h2,
+        .hero h2 {
+          font-size: 36px;
+        }
+
+        .topbar h1 {
+          font-size: 24px;
+        }
+
+        .gallery img {
+          height: 180px;
+        }
+      }
+      .parallax-fixed {
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+      }
+      @media (max-width: 768px) {
+        .parallax-fixed {
+          background-attachment: scroll;
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <header class="topbar">
+      <nav>
+        <a href="#top">Home</a>
+      </nav>
+      <h1>Happy birthday Aditri!</h1>
+    </header>
+
+    <main>
+      <section class="intro parallax-fixed">
+        <div class="content">
+          <h2>
+            On February 04 2006 earth got gifted a very special person....
+          </h2>
+        </div>
+      </section>
+
+      <section class="full-screen-split parallax-fixed">
+        <div class="content-wrap">
+          <div class="split">
+            <div>
+              <h2>Happy birthday to the toughest girl i know :]</h2>
+              <p>
+                My dearest Adi, Happy 20th birthday, my love! Today, I want to
+                express how truly grateful I am to have you in my life. From the
+                moment we met, you have captivated my heart with your infectious
+                laughter, kind heart, and beautiful soul. Every day with you
+                feels like a celebration, but on this special day, I want to
+                shower you with all the love and affection you deserve. You
+                bring so much joy into my life, and I am forever grateful for
+                the love and happiness you have brought into my world. As we
+                embark on this new chapter together, I promise to always cherish
+                and support you in every way possible. May this birthday be the
+                beginning of a year filled with endless love, laughter, and
+                unforgettable memories. Happy birthday, my sweet baby! With all
+                my love!!!
+              </p>
+            </div>
+            <img src="images/toughest-girl.jpg" alt="Aditri at the museum" />
+          </div>
+        </div>
+      </section>
+
+      <section class="memory">
+        <h2>Remember where first met?</h2>
+        <img src="images/first-meet.jpg" alt="First meet location" />
+        <p class="caption">
+          on a summer day of 2025 on october 31 i saw you irl for the first time
+          and i knew for sure that she is one i wanna spend my life with ;]
+        </p>
+      </section>
+
+      <section class="full-gallery">
+        <h2>Our first date</h2>
+        <div class="gallery five">
+          <img src="images/museum-1.jpg" alt="Museum photo 1" />
+          <img src="images/museum-2.jpg" alt="Museum photo 2" />
+          <img src="images/museum-3.jpg" alt="Museum photo 3" />
+          <img src="images/museum-4.jpg" alt="Museum photo 4" />
+          <img src="images/museum-5.jpg" alt="Museum photo 5" />
+        </div>
+      </section>
+
+      <section class="full-gallery">
+        <h2>Our first time going to a photobooth</h2>
+        <div class="gallery three trampoline">
+          <img src="images/trampoline-1.jpg" alt="Trampoline date photo 1" />
+          <img src="images/trampoline-2.jpg" alt="Trampoline date photo 2" />
+          <img src="images/trampoline-3.jpg" alt="Trampoline date photo 3" />
+        </div>
+        <p class="caption">and also our second date</p>
+      </section>
+
+      <section class="full-gallery bowling-section parallax-fixed">
+        <h2>This section is for the prettiest girl alive</h2>
+        <div class="gallery four bowling">
+          <img src="images/bowling-1.jpg" alt="Bowling photo 1" />
+          <img src="images/bowling-2.jpg" alt="Bowling photo 2" />
+          <img src="images/bowling-3.jpg" alt="Bowling photo 3" />
+          <img src="images/bowling-4.jpg" alt="Bowling photo 4" />
+        </div>
+      </section>
+
+      <section class="photo-letter parallax-fixed">
+        <div class="content">
+          <p>
+            From the moment i saw our match on hinge, I knew my life was about
+            to change in the most beautiful way possible. It's hard to believe
+            how far we've come since that day, and I wanted to take a moment to
+            reflect on our journey and express my gratitude for the incredible
+            memories we've created together.
+          </p>
+          <p>
+            I still remember the first time we spoke, the way your eyes sparkled
+            with curiosity and kindness. Our conversations flowed effortlessly,
+            and I found myself looking forward to each moment we spent together.
+            Those early days were filled with laughter, shared stories, and the
+            joy of discovering each other's quirks and passions.
+          </p>
+          <p>
+            As our bond grew stronger, so did my admiration and love for you.
+            We've shared countless memories, Stories and experiences. Each
+            memory we've made is a treasure that I hold close to my heart. Do
+            you remember the first time we held hands i was so nervous i
+            couldn't take the courage to ask for your hand when you were sitting
+            across and then you asked i thought my heart would come out for a
+            second lmao. That day, I realized I had found someone truly special.
+          </p>
+          <p>
+            Through the ups and downs, the challenges and triumphs, you have
+            been my rock, my confidant, and my best friend. Your unwavering
+            support and love have given me the strength to overcome obstacles
+            and do better everyday for myself.
+          </p>
+          <p>
+            I am grateful for the small moments as much as the grand ones – the
+            quite calls where we are just watching reels or somethind and not
+            doing anything. The times when you are sleeping and i can hear you
+            breathe i fall for you a little more.
+          </p>
+          <p>
+            As we look to the future, I am filled with excitement and hope for
+            all that is to come. I can't wait to create more memories with you,
+            to continue growing and learning together. Whether we are embarking
+            on new adventures or simply enjoying the beauty of everyday life, I
+            know that every moment with you is a gift.
+          </p>
+          <p>
+            I promise to cherish you, to support you, and to love you with all
+            my heart, now and forever. Even as time passes and we grow older, my
+            love for you will remain constant and true. I am grateful for every
+            moment we've shared and for the countless memories we have yet to
+            make.
+          </p>
+          <p>
+            Thank you for being the light in my life, for your unwavering love,
+            and for the beautiful memories we've created together. I look
+            forward to a lifetime of happiness with you, until death do us part.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
